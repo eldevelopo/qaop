@@ -1,0 +1,67 @@
+<!doctype html><html lang=en><meta charset=utf-8><title>Qaop/JS info</title>
+<link rel=icon href="icon"><link rel=mask-icon href="mask.svg" color=#c01><meta name=viewport content="width=device-width"><link rel=canonical href="info">
+<style>
+:root{--fg:#111;--f2:#333;--bg:#FBFBF9;--ln:#B01;--lv:#656;--bb:#C01;--bf:#fff;--gr:#eee;--do:#bcd}@media (prefers-color-scheme:dark){:root{--fg:#ddd;--f2:#ccc;--bg:#222;--ln:#d34;--lv:#cb8;--bb:#912;--bf:#ccc;--gr:#444;--do:#456}}:root{--nw:122px;--mm:170px}body{font:15px/1.5 arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}h1{font:25px/1 tahoma,sans-serif;color:var(--ln)}main{margin:62px 12px 35px var(--mm)}a{color:var(--ln);outline:0;text-decoration:none}main a:focus,main a:hover{text-decoration:underline;outline:0}main :visited{color:var(--lv)}::selection{color:#fff;background:#c01}#l{display:flex;flex-flow:column;position:fixed;top:0;bottom:0;width:var(--nw);overflow-y:auto;padding-right:4px;font-size:13px;z-index:1}#emu{background:var(--bb);height:100px;padding:16px 2px 0 0;text-align:right;box-shadow:rgba(0,0,0,.2) 0 1px 5px,inset rgba(0,0,0,.3) 9px 0 9px -9px}#emu path{fill:var(--bf)}#d,#l>ul{width:90px;align-self:flex-end}#l>ul{padding:0;margin:12px 0;list-style:none}#l li>*{display:block;padding:6px 12px 6px 6px;margin:0;text-align:right}#d{letter-spacing:5px;font:italic 8px/1 consolas,arial,sans-serif;margin:auto 0 16px;padding:6px 0;color:var(--do);cursor:pointer;text-align:center;transition:all .3s 3s,background-color .1s}#d:hover,#l li>a:focus,#l li>a:hover{background:#f0f0f0}#jb{order:-1;margin-bottom:37px;font-size:15px;line-height:27px;width:27px;text-align:center;color:var(--gr)}#jb:focus,#jb:hover{color:#b01;background:#fff}#d>i{letter-spacing:0;font:bold italic 12px/1.6 verdana,sans-serif;color:#379;border:0;overflow:hidden;cursor:pointer;display:none}#d:hover>i{display:block}@media (max-width:822px){:root{--nw:91px;--mm:calc(91px + 4%)}}@media (max-height:400px){main{margin-top:26px}#d,#jb{margin-bottom:0}}@media print{#emu{box-shadow:none;padding-top:0;background:0 0}#emu path{fill:#000}}main{max-width:750px}h2{font:bold 12px/1 arial,sans-serif;text-transform:uppercase;margin:1em 0}dt{float:left;height:1em}dd{margin-left:85px;min-height:1em}.w dd{margin-left:10em}kbd{display:inline-block;padding:1px 4px;min-width:3ex;margin:1px;vertical-align:1px;background:#eee;color:#000;border:1px solid;border-color:#d1d1d1 #ccc #bbb;box-shadow:rgba(0,0,0,.1) 0 2px 5px;background-image:linear-gradient(0deg,#e3e3e3,#f1f1f1,#ededed);font:11px/1.25 sans-serif;border-radius:2px;text-align:center}code{font-family:sans-serif;color:#080}code>span{letter-spacing:1px}main .ha{color:inherit}summary:focus{text-decoration:#b01 dashed underline;outline:0}@media (prefers-color-scheme:dark){kbd{background:0 0;color:var(--fg)}code{color:#193}}</style>
+<main><h1>Qaop/JS – ZX Spectrum emulator</h1>
+<p>This is Sinclair ZX Spectrum emulator written in JavaScript.
+Models 48K and 128 supported.
+</p>
+
+<div style=overflow:hidden>
+<div style=float:left;width:255px>
+<h2>Keyboard</h2>
+<dl>
+<dt><kbd>Shift</kbd><dd><i>Caps Shift</i> <dt><kbd>Ctrl</kbd>, <kbd>Alt</kbd><dd><i>Symbol Shift</i>
+<dt><kbd>Ctrl</kbd>+<kbd>Del</kbd><dd>Reset
+<dt><kbd>F1</kbd><dd>This page<dt><kbd>F2</kbd><dd>Remember state <dt><kbd>F3</kbd><dd>Recall state <dt><kbd>F8</kbd><dd><a href="keyboard" style=color:inherit>Keyboard layout</a><dt><kbd>F9</kbd><dd>Toggle menus
+<dt><kbd>F10</kbd><dd>Mute <dt><kbd>F11</kbd><dd>Fullscreen <dt><kbd>Pause</kbd><dd>Pause
+<dt><kbd>PgUp</kbd>/<kbd>PgDn</kbd><dd>Change volume <dt><dt><kbd>Tab</kbd><dd><i>Extended Mode</i> <dt><kbd>Home</kbd><dd><i>Edit</i> <dt><kbd>Insert</kbd><dd>Games page
+</dl>
+</div>
+
+<div style=float:left;max-width:450px>
+<h2>URL Parameters</h2>
+<dl>
+<dt><code><span>#</span>l=<i>URL</i></code><dd>Load a program (TAP, Z80, SNA, ROM) or a screen
+<!--dt><code><span>#</span>t=<i>URL</i></code><dd>Insert tape (but don’t load)-->
+<dt><code><span>#</span>u=<i>URL</i></code><dd>Load list of programs (plain text or HTML)
+<dt><code><span>#</span>128</code><dd>Spectrum 128 (<code><span>#</span>~128</code> switches to 48K)
+<dt><code><span>#</span>ay</code><dd>Enable AY even in 48K mode.
+</dl>
+<p>experimental:
+<dl>
+<dt><code><span>#</span>tc2048</code><dd>Timex TC2048 mode (HiRes not supported).
+</dl>
+<p>Parameters may be concatenated. Prefix boolean flag with <code title=tilde>~</code> to disable. URL should point to a <a href="http://enable-cors.org/server.html">CORS-enabled</a> resource.
+<br>(header <code>Access-Control-Allow-Origin: *</code>)
+</div>
+</div>
+<details><summary><code>Content-Type</code>s</summary><dl class=w>
+<dt><code>application/x.zx.rom</code><dd> ROM image
+<dt><code>application/x.zx.tap</code><dd> TAP file
+<dt><code>application/x.zx.sna</code><dd> SNA snapshot
+<dt><code>application/x.zx.z80</code><dd> Z80 snapshot
+<dt><code>image/x.zx.scr</code><dd> Screen
+</dl></details>
+
+<div style=font-size:small>
+<p style=margin-top:2rem>Original ZX Spectrum ROM © <a class=ha href="http://amstrad.com/">Amstrad PLC</a>.
+<br><i style=color:var(--f2)>Amstrad have kindly given their per­mission for the redistribution of their copyrighted material but retain that copyright.</i>
+
+<p>© 2011 – 2020 <a class=ha href="../~jb">Jan Bobrowski</a></p>
+</div></main>
+<nav id=l>
+<a href="../qaop.html" id=emu accesskey=q>
+<svg width=72 height=88><title>run QAOP</title>
+<path transform=scale(5)
+d='m2 0h2v2h1v1h2v-1h1v-2h2v2h-2v2h1v1h1v1h1v1h1v2h-1v-2h-1v1h-1v1h-1v1h1v1h-1v1h-1v-1h1v-1h-1v-1h-2v1h-1v1h1v1h-1v-1h-1v-1h1v-1h-1v-1h-1v-1h-1v2h-1v-2h1v-1h1v-1h1v-1h1v-2h-2zm2 7v1h4v-1z'/>
+<path transform=scale(2)
+d='m13 37h-4v2h4zm16 0h-4v2h4zm-24 0h-4v4h2v-1h-1v-1h1v1h1v1h1zm16 0h-4v4h4zm-20 5v-1h-1v-4h1v-1h4v1h1v4h-1v1zm12 0v-2h-4v2h-1v-5h1v-1h4v1h1v5zm4 0v-1h-1v-4h1v-1h4v1h1v4h-1v1zm7 0v-6h5v1h1v2h-1v1h-4v2z'/>
+</svg></a>
+<ul><li><b style='padding-right:2px;cursor:default'>info ‣</b><li><a href="games.html" accesskey=g>games</a><li><a href="links.html" accesskey=l>links</a></ul>
+<a id=d tabindex=0 style=visibility:hidden;letter-spacing:-1px;color:#B01></a>
+<a id=jb href="../~jb" target=_top rel=author>~jb</a>
+</nav>
+<script>
+//if(localStorage['qaop-state'])setTimeout(function(){var e=document.getElementById('d');e.innerHTML='<i><b>Pay</b>Pal</i>donate<form action=https://www.paypal.com/cgi-bin/webscr method=post hidden%cmd value=_donations%business value=jb&#64;torinak.com%item_name value=Qaop/JS%lc value=US>'.replace(/%/g,'><input type=hidden name=');e.onclick=function(){e.lastChild.submit()};e.setAttribute('style','')},9)
+</script>

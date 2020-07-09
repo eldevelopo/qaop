@@ -1,0 +1,1 @@
+{"name":"Qaop ZX Spectrum Emulator","short_name":"QAOP","author":"Jan Bobrowski","start_url":"/qaop","display":"standalone","icons":[{"src":"icon","sizes":"128x128"},{"src":"maskable-icon.png","sizes":"144x144","purpose":"maskable"}],"shortcuts":[{"name":"About","url":"info"},{"name":"Games","url":"games"},{"name":"Links","url":"links"}]}

@@ -1,0 +1,311 @@
+<!doctype html><html lang=en><meta charset=utf-8><title>ZX Spectrum games – Qaop/JS</title>
+<link rel=icon href="icon"><link rel=mask-icon href="mask.svg" color=#c01><meta name=viewport content="width=device-width"><link rel=canonical href="games"><meta name=description content="ZX Spectrum games playable directly in the browser.">
+<style>
+:root{--fg:#111;--f2:#333;--bg:#FBFBF9;--ln:#B01;--lv:#656;--bb:#C01;--bf:#fff;--gr:#eee;--do:#bcd}@media (prefers-color-scheme:dark){:root{--fg:#ddd;--f2:#ccc;--bg:#222;--ln:#d34;--lv:#cb8;--bb:#912;--bf:#ccc;--gr:#444;--do:#456}}:root{--nw:122px;--mm:170px;--yw:36px;--ys:-36px}body{font:15px/1.5 arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}h1{font:25px/1 tahoma,sans-serif;color:var(--ln)}main{margin:62px 12px 35px var(--mm)}a{color:var(--ln);outline:0;text-decoration:none}main a:focus,main a:hover{text-decoration:underline;outline:0}main :visited{color:var(--lv)}::selection{color:#fff;background:#c01}#l{display:flex;flex-flow:column;position:fixed;top:0;bottom:0;width:var(--nw);overflow-y:auto;padding-right:4px;font-size:13px;z-index:1}#emu{background:var(--bb);height:100px;padding:16px 2px 0 0;text-align:right;box-shadow:rgba(0,0,0,.2) 0 1px 5px,inset rgba(0,0,0,.3) 9px 0 9px -9px}#emu path{fill:var(--bf)}#d,#l>ul{width:90px;align-self:flex-end}#l>ul{padding:0;margin:12px 0;list-style:none}#l li>*{display:block;padding:6px 12px 6px 6px;margin:0;text-align:right}#d{letter-spacing:5px;font:italic 8px/1 consolas,arial,sans-serif;margin:auto 0 16px;padding:6px 0;color:var(--do);cursor:pointer;text-align:center;transition:all .3s 3s,background-color .1s}#d:hover,#l li>a:focus,#l li>a:hover{background:#f0f0f0}#jb{order:-1;margin-bottom:37px;font-size:15px;line-height:27px;width:27px;text-align:center;color:var(--gr)}#jb:focus,#jb:hover{color:#b01;background:#fff}#d>i{letter-spacing:0;font:bold italic 12px/1.6 verdana,sans-serif;color:#379;border:0;overflow:hidden;cursor:pointer;display:none}#d:hover>i{display:block}@media (max-width:822px){:root{--nw:91px;--mm:calc(91px + 4%);--yw:calc(4.5ex + 1%);--ys:-3.5ex}}@media (max-height:400px){main{margin-top:26px}#d,#jb{margin-bottom:0}}@media print{#emu{box-shadow:none;padding-top:0;background:0 0}#emu path{fill:#000}}main{max-width:820px;padding:0 0 0 20px;margin-top:25px;margin-right:1px}#g li{display:inline-block;width:205px;margin:0;vertical-align:top;white-space:pre}section{display:flex;margin:0 0 0 var(--ys);padding-top:1em}section>*{margin:0;padding:0}#tts,h2,h2 a{font-size:11px;font-weight:400;line-height:19px;color:#555}h2>a:hover{text-decoration:none}h2{padding:1px 0;min-width:var(--yw)}h2 a{padding:1px 1px 0;position:sticky;top:6px}#g li>a{display:inline-block;padding:1px 3px;line-height:17px}#g :focus,:target>h2>a{color:#fff;background:#c01;border-radius:2px;outline:0;text-decoration:none}#g li:hover a{opacity:1;transition:opacity .1s .5s}#g a:focus,#g a:focus~a{opacity:1;transition:opacity 0}#g a~a{font-size:75%;line-height:1;vertical-align:text-top;margin-left:3px;opacity:0;transition:opacity .1s}#tts{border:0;background:0 0;padding:2px 3px;outline-color:#b01;width:200px}:-moz-window-inactive #tts{visibility:hidden}</style>
+<main><form onsubmit=return!1 style=height:22px><input type=search id=tts placeholder="Type to search." pattern=[0-9A-Za-z]+></form>
+<div id=g><section id=1982><h2><a href="games#1982" tabindex=-1>1982</a></h2><ul><li title="Arcadia
+David H. Lawson / Imagine 1982"><a href="../qaop.html#!arcadia">Arcadia</a><li title="Centipede
+David Heelas / DK’Tronics 1982"><a href="../qaop.html#!centipede">Centipede</a><li title="Football Manager
+Kevin Toms / Addictive Games 1982"><a href="../qaop.html#!manager">Football Manager</a><li title="Galaxians
+William Wray / Artic 1982"><a href="../qaop.html#!galaxians">Galaxians</a><li title="The Hobbit
+Beam / Melbourne House 1982"><a href="../qaop.html#!hobbit">The Hobbit</a><li title="Horace Goes Skiing
+William Tang / Psion 1982"><a href="../qaop.html#!horaceskiing">Horace Goes Skiing</a><li title="Hungry Horace
+Beam / Psion 1982"><a href="../qaop.html#!hungryhorace">Hungry Horace</a><li title="Penetrator
+Beam / Melbourne House 1982"><a href="../qaop.html#!penetrator">Penetrator</a><li title="Planetoids
+Psion 1982"><a href="../qaop.html#!planetoids">Planetoids</a><li title="Space Raiders
+Psion 1982"><a href="../qaop.html#!raiders">Space Raiders</a><li title="3D-Tanx
+Don Priestley / DK’Tronics 1982"><a href="../qaop.html#!3dtanx">3D-Tanx</a><li title="Time-Gate
+John Hollis / Quicksilva 1982"><a href="../qaop.html#!timegate">Time-Gate</a></ul></section><section id=1983><h2><a href="games#1983" tabindex=-1>1983</a></h2><ul><li title="Alchemist
+Ian Weatherburn / Imagine 1983"><a href="../qaop.html#!alchemist">Alchemist</a><li title="Ant Attack
+Sandy White / Quicksilva 1983"><a href="../qaop.html#!antattack">Ant Attack</a><li title="Aquaplane
+John Hollis / Quicksilva 1983"><a href="../qaop.html#!aquaplane">Aquaplane</a><li title="Armageddon
+Adrian Sherwin / Ocean 1983"><a href="../qaop.html#!armageddon">Armageddon</a><li title="The Birds and the Bees
+Adrian Sherwin / Bug-Byte 1983"><a href="../qaop.html#!birdsandbees">The Birds and the Bees</a><li title="Bugaboo
+Indescomp / Quicksilva 1983"><a href="../qaop.html#!bugaboo">Bugaboo</a><li title="3D Combat Zone
+Jon Ritman / Artic 1983"><a href="../qaop.html#!combatzone">3D Combat Zone</a><li title="Deathchase
+Mervyn Estcourt / Micromega 1983"><a href="../qaop.html#!deathchase">Deathchase</a><li title="Dictator
+Don Priestley / DK’Tronics 1983"><a href="../qaop.html#!dictator">Dictator</a><li title="Fighter Pilot
+David Marshall / Digital Integration 1983"><a href="../qaop.html#!fighterpilot">Fighter Pilot</a><li title="Froggy
+DJL Software 1983"><a href="../qaop.html#!froggy">Froggy</a><li title="Halls of the Things
+Crystal Computing 1983"><a href="../qaop.html#!hallsofthings">Halls of the Things</a><li title="Harrier Attack
+Mike Richardson / Durell 1983"><a href="../qaop.html#!harrier">Harrier Attack</a><li title="High Noon
+Work Force 1983"><a href="../qaop.html#!highnoon">High Noon</a><li title="Horace &amp; the Spiders
+William Tang / Psion 1983"><a href="../qaop.html#!horacespiders">Horace &amp; the Spiders</a><li title="Invasion of the Body Snatchas
+Crystal Computing 1983" style=transform:scaleX(.98);transform-origin:left><a href="../qaop.html#!blowout">Invasion of the Body Snatchas</a><li title="Jumping Jack
+Imagine 1983"><a href="../qaop.html#!jumpingjack">Jumping Jack</a><li title="Luna Crabs
+Mervyn Estcourt / Micromega 1983"><a href="../qaop.html#!lunacrabs">Luna Crabs</a><li title="Manic Miner
+Matthew Smith / Bug-Byte 1983"><a href="../qaop.html#!manicminer">Manic Miner</a><li title="Maziacs
+Don Priestley / DK’Tronics 1983"><a href="../qaop.html#!maziacs">Maziacs</a><li title="Mined-Out
+Ian Andrew / Quicksilva 1983"><a href="../qaop.html#!minedout">Mined-Out</a><li title="Night Gunner
+Rod Swift / Digital Integration 1983"><a href="../qaop.html#!nightgunner">Night Gunner</a><li title="Pheenix
+Martin Ward / Megadodo 1983"><a href="../qaop.html#!pheenix">Pheenix</a><li title="Pinball
+Sagittarian 1983"><a href="../qaop.html#!pinball">Pinball</a><li title="Pogo
+Ronald Rhodes / Ocean 1983"><a href="../qaop.html#!pogo">Pogo</a><li title="Pool
+Mike Lamb / CDS Microsystems 1983"><a href="../qaop.html#!pool">Pool</a><li title="Scuba Dive
+Mike Richardson / Durell 1983"><a href="../qaop.html#!scubadive">Scuba Dive</a><li title="Spawn of Evil
+Don Priestley / DK’Tronics 1983"><a href="../qaop.html#!spawnofevil">Spawn of Evil</a><li title="Spectipede
+R&amp;R Software 1983"><a href="../qaop.html#!spectipede">Spectipede</a><li title="Splat
+Incentive 1983"><a href="../qaop.html#!splat">Splat</a><li title="Thrusta
+Patrick Richmond / Software Projects 1983"><a href="../qaop.html#!thrusta">Thrusta</a><li title="The Train Game
+Microsphere 1983"><a href="../qaop.html#!traingame">The Train Game</a><li title="Valhalla
+Legend 1983"><a href="../qaop.html#!valhalla">Valhalla</a><li title="Wheelie
+Microsphere 1983"><a href="../qaop.html#!wheelie">Wheelie</a><li title="Zzoom
+John Gibson / Imagine 1983"><a href="../qaop.html#!zzoom">Zzoom</a></ul></section><section id=1984><h2><a href="games#1984" tabindex=-1>1984</a></h2><ul><li title="All or Nothing
+Paul Reynolds / Abbex 1984"><a href="../qaop.html#!allornothing">All or Nothing</a><li title="Antics
+Adrian Sherwin / Bug-Byte 1984"><a href="../qaop.html#!antics">Antics</a><li title="Automania
+Chris Hinsley / Mikro-Gen 1984"><a href="../qaop.html#!automania">Automania</a><li title="Avalon
+Steve Turner / Hewson 1984"><a href="../qaop.html#!avalon">Avalon</a><li title="Beach-Head
+US Gold 1984"><a href="../qaop.html#!beachhead">Beach-Head</a><li title="Booty
+John F. Cain / Firebird 1984"><a href="../qaop.html#!booty">Booty</a><li title="Boulder Dash
+Front Runner 1984"><a href="../qaop.html#!boulderdash">Boulder Dash</a><li title="Bruce Lee
+Ocean / US Gold 1984"><a href="../qaop.html#!brucelee">Bruce Lee</a><li title="Chuckie Egg
+Nigel Alderton / A’n’F Software 1984"><a href="../qaop.html#!chuckieegg">Chuckie Egg</a><li title="Codename MAT
+Derek Brewster / Micromega 1984"><a href="../qaop.html#!codenamemat">Codename MAT</a><li title="Dark Star
+Simon Brattel / Design Design 1984"><a href="../qaop.html#!darkstar">Dark Star</a><li title="Decathlon
+Ocean 1984"><a href="../qaop.html#!decathlon">Decathlon</a> <a rel=nofollow href="../qaop.html#!decathlon:day2">day 2</a><li title="Doomdark’s Revenge
+Mike Singleton / Beyond 1984"><a href="../qaop.html#!doomdark">Doomdark’s Revenge</a><li title="Eric &amp; the Floaters
+Hudson Soft 1984"><a href="../qaop.html#!ericfloaters">Eric &amp; the Floaters</a><li title="Fantastic Voyage
+John R. Edmonds / Quicksilva 1984"><a href="../qaop.html#!fantasticvoyage">Fantastic Voyage</a><li title="Fred
+Indescomp 1984"><a href="../qaop.html#!fred">Fred</a><li title="Full Throttle
+Mervyn Estcourt / Micromega 1984"><a href="../qaop.html#!fullthrottle">Full Throttle</a><li title="Jet Set Willy
+Matthew Smith / Software Projects 1984"><a href="../qaop.html#!jetsetwilly">Jet Set Willy</a><li title="Kokotoni Wilf
+Elite 1984"><a href="../qaop.html#!kokotoni">Kokotoni Wilf</a><li title="Krakatoa
+Paul Reynolds / Abbex 1984"><a href="../qaop.html#!krakatoa">Krakatoa</a><li title="Lode Runner
+Platinum Productions / Software Projects 1984"><a href="../qaop.html#!loderunner">Lode Runner</a><li title="Lords of Midnight
+Mike Singleton / Beyond 1984"><a href="../qaop.html#!midnight">Lords of Midnight</a><li title="Match Day
+Ocean 1984"><a href="../qaop.html#!matchday">Match Day</a><li title="Match Point
+Steve Kelly / Psion 1984"><a href="../qaop.html#!matchpoint">Match Point</a><li title="Monty Mole
+Peter Harrap / Gremlin 1984"><a href="../qaop.html#!montymole">Monty Mole</a><li title="Moon Alert
+Ocean 1984"><a href="../qaop.html#!moonalert">Moon Alert</a><li title="Ms. Pac-Man
+DJL Software / Atarisoft 1984"><a href="../qaop.html#!mspacman">Ms. Pac-Man</a><li title="Mugsy
+Beam / Melbourne House 1984"><a href="../qaop.html#!mugsy">Mugsy</a><li title="Nifty Lifty
+Kevin Bezant / Visions 1984"><a href="../qaop.html#!niftylifty">Nifty Lifty</a><li title="The Oracle’s Cave
+Chris Dorrell / Doric Computer Services 1984"><a href="../qaop.html#!oraclescave">The Oracle’s Cave</a><li title="Panama Joe
+Amazon Systems / Parker Software 1984"><a href="../qaop.html#!panamajoe">Panama Joe</a><li title="Pi-In’Ere
+Automata 1984"><a href="../qaop.html#!piinere">Pi-In’Ere</a><li title="Pyjamarama
+Chris Hinsley / Mikro-Gen 1984"><a href="../qaop.html#!pyjamarama">Pyjamarama</a><li title="Rally Driver
+Five Ways / Hill MacGibbon 1984"><a href="../qaop.html#!rallydriver">Rally Driver</a><li title="Sir Lancelot
+Stephen Cargill / Melbourne House 1984"><a href="../qaop.html#!lancelot">Sir Lancelot</a><li title="Skool Daze
+David Reidy / Microsphere 1984"><a href="../qaop.html#!skooldaze">Skool Daze</a><li title="3D Starstrike
+Realtime Games 1984"><a href="../qaop.html#!starstrike">3D Starstrike</a><li title="Stop the Express
+Hudson Soft / Sinclair 1984"><a href="../qaop.html#!stopexpress">Stop the Express</a><li title="Technician Ted
+Hewson 1984"><a href="../qaop.html#!techted">Technician Ted</a><li title="Tornado Low Level
+Costa Panayi / Vortex 1984"><a href="../qaop.html#!tll">Tornado Low Level</a><li title="Trashman
+Malcolm Evans / New Generation 1984"><a href="../qaop.html#!trashman">Trashman</a><li title="Turmoil
+David Turner / Bug-Byte 1984"><a href="../qaop.html#!turmoil">Turmoil</a><li title="Tir Na Nog
+Gargoyle 1984"><a href="../qaop.html#!tirnanog">Tír Na Nòg</a><li title="Worse Things Happen at Sea
+Mind’s Eye / Silversoft 1984"><a href="../qaop.html#!thingsatsea">Worse Things Happen at Sea</a></ul></section><section id=1985><h2><a href="games#1985" tabindex=-1>1985</a></h2><ul><li title="Arnhem
+Robert T. Smith / CCS 1985"><a href="../qaop.html#!arnhem">Arnhem</a><li title="Back to Skool
+David Reidy / Microsphere 1985"><a href="../qaop.html#!backtoskool">Back to Skool</a><li title="BC’s Quest for Tires
+Mike Davies / Software Projects 1985"><a href="../qaop.html#!questfortires">BC’s Quest for Tires</a><li title="Beach-Head II
+US Gold 1985"><a href="../qaop.html#!beachhead2">Beach-Head II</a><li title="Boulder Dash II
+Peter Liepa / Prism Leisure 1985"><a href="../qaop.html#!boulderdash2">Boulder Dash II</a><li title="Chaos
+Julian Gollop / Games Workshop 1985"><a href="../qaop.html#!chaos">Chaos</a><li title="Chuckie Egg 2
+A’n’F Software 1985"><a href="../qaop.html#!chuckieegg2">Chuckie Egg 2</a><li title="Cyclone
+Costa Panayi / Vortex 1985"><a href="../qaop.html#!cyclone">Cyclone</a><li title="Desert Rats
+Robert T. Smith / CCS 1985"><a href="../qaop.html#!desertrats">Desert Rats</a><li title="Dragontorc
+Steve Turner / Hewson 1985"><a href="../qaop.html#!dragontorc">Dragontorc</a><li title="Dun Darach
+Gargoyle 1985"><a href="../qaop.html#!dundarach">Dun Darach</a><li title="Dynamite Dan
+Rod Bowkett / Mirrorsoft 1985"><a href="../qaop.html#!dynamitedan">Dynamite Dan</a><li title="Elite
+Torus / Firebird 1985"><a href="../qaop.html#!elite">Elite</a><li title="Enigma Force
+Denton Designs / Beyond 1985"><a href="../qaop.html#!enigmaforce">Enigma Force</a><li title="Everyone’s a Wally
+Mikro-Gen 1985"><a href="../qaop.html#!wally">Everyone’s a Wally</a><li title="Fairlight
+Bo Jangeborg / The Edge 1985"><a href="../qaop.html#!fairlight">Fairlight</a><li title="Finders Keepers
+David Jones / Mastertronic 1985"><a href="../qaop.html#!finderskeepers">Finders Keepers</a><li title="Formula One
+CRL Group 1985"><a href="../qaop.html#!formula1">Formula One</a><li title="Frankie Goes to Hollywood
+Denton Designs / Ocean 1985"><a href="../qaop.html#!frankie">Frankie Goes to Hollywood</a><li title="Gyron Atrium
+Torus / Firebird 1985"><a href="../qaop.html#!atrium">Gyron Atrium</a><li title="Gyron Necropolis
+Torus / Firebird 1985"><a href="../qaop.html#!necropolis">Gyron Necropolis</a><li title="Gyroscope
+Catalyst Coders / Melbourne House 1985"><a href="../qaop.html#!gyroscope">Gyroscope</a><li title="Herbert’s Dummy Run
+David Perry / Mikro-Gen 1985"><a href="../qaop.html#!dummyrun">Herbert’s Dummy Run</a><li title="Highway Encounter
+Costa Panayi / Vortex 1985"><a href="../qaop.html#!encounter">Highway Encounter</a><li title="Hyper Sports
+Jonathan Smith / Imagine 1985"><a href="../qaop.html#!hypersports">Hyper Sports</a><li title="Impossible Mission
+Softstone / US Gold 1985"><a href="../qaop.html#!impossible">Impossible Mission</a><li title="Jet Set Willy II
+Derrick P. Rowson / Software Projects 1985"><a href="../qaop.html#!jetsetwilly2">Jet Set Willy II</a><li title="Marsport
+Gargoyle 1985"><a href="../qaop.html#!marsport">Marsport</a><li title="Mikie
+Jonathan Smith / Imagine 1985"><a href="../qaop.html#!mikie">Mikie</a><li title="Monty on the Run
+Peter Harrap / Gremlin 1985"><a href="../qaop.html#!montymole3">Monty on the Run</a><li title="Moon Cresta
+Incentive 1985"><a href="../qaop.html#!mooncresta">Moon Cresta</a><li title="N.O.M.A.D
+Ocean 1985"><a href="../qaop.html#!nomad">N.O.M.A.D</a><li title="Popeye
+Don Priestley / DK’Tronics 1985"><a href="../qaop.html#!popeye">Popeye</a><li title="The Rocky Horror Show
+CRL Group 1985"><a href="../qaop.html#!horrorshow">The Rocky Horror Show</a><li title="Saboteur
+Clive Townsend / Durell 1985"><a href="../qaop.html#!saboteur">Saboteur</a><li title="Shadowfire
+Denton Designs / Beyond 1985"><a href="../qaop.html#!shadowfire">Shadowfire</a><li title="Spellbound
+David Jones / Mastertronic 1985"><a href="../qaop.html#!spellbound">Spellbound</a><li title="Spy Hunter
+Denton Designs / US Gold 1985"><a href="../qaop.html#!spyhunter">Spy Hunter</a><li title="Starion
+David M. Webb / Melbourne House 1985"><a href="../qaop.html#!starion">Starion</a><li title="Starquake
+Stephen Crow / Bubble Bus 1985"><a href="../qaop.html#!starquake">Starquake</a><li title="Swords &amp; Sorcery
+PSS 1985"><a href="../qaop.html#!swordssorcery">Swords &amp; Sorcery</a><li title="Tapper
+US Gold 1985"><a href="../qaop.html#!tapper">Tapper</a><li title="Tau Ceti
+Pete Cooke / CRL Group 1985"><a href="../qaop.html#!tauceti">Tau Ceti</a><li title="Tomahawk
+David Marshall / Digital Integration 1985"><a href="../qaop.html#!tomahawk">Tomahawk</a><li title="The Way of the Exploding Fist
+Beam / Melbourne House 1985"><a href="../qaop.html#!fist">The Way of the Exploding Fist</a><li title="West Bank
+Dinamic 1985"><a href="../qaop.html#!westbank">West Bank</a><li title="Wriggler
+Devonshire House / Romantic Robot 1985"><a href="../qaop.html#!wriggler">Wriggler</a></ul></section><section id=1986><h2><a href="games#1986" tabindex=-1>1986</a></h2><ul><li title="Action Reflex
+Christian F. Urquhart / Mirrorsoft 1986"><a href="../qaop.html#!actionreflex">Action Reflex</a><li title="Alien Highway
+Mark Haigh-Hutchinson / Vortex 1986"><a href="../qaop.html#!encounter2">Alien Highway</a><li title="Bobby Bearing
+The Edge 1986"><a href="../qaop.html#!bobbybearing">Bobby Bearing</a><li title="Bomb Jack
+Elite 1986"><a href="../qaop.html#!bombjack">Bomb Jack</a><li title="Bounder
+Gremlin 1986"><a href="../qaop.html#!bounder">Bounder</a><li title="Cobra
+Jonathan Smith / Ocean 1986"><a href="../qaop.html#!cobra">Cobra</a><li title="Contact Sam Cruise
+Microsphere 1986"><a href="../qaop.html#!samcruise">Contact Sam Cruise</a><li title="Dan Dare
+Gang of Five / Virgin Games 1986"><a href="../qaop.html#!dandare">Dan Dare</a><li title="Deep Strike
+Nick Wilson / Durell 1986"><a href="../qaop.html#!deepstrike">Deep Strike</a><li title="Dynamite Dan II
+Rod Bowkett / Mirrorsoft 1986"><a href="../qaop.html#!dynamitedan2">Dynamite Dan II</a><li title="Equinox
+Mikro-Gen 1986"><a href="../qaop.html#!equinox">Equinox</a><li title="Fat Worm Blows a Sparky
+Julian G. Todd / Durell 1986"><a href="../qaop.html#!fatworm">Fat Worm Blows a Sparky</a><li title="Firelord
+Stephen Crow / Hewson 1986"><a href="../qaop.html#!firelord">Firelord</a><li title="Fist II
+Melbourne House 1986"><a href="../qaop.html#!fist2">Fist II</a><li title="The Great Escape
+Denton Designs / Ocean 1986"><a href="../qaop.html#!greatescape">The Great Escape</a><li title="Green Beret
+Jonathan Smith / Imagine 1986"><a href="../qaop.html#!greenberet">Green Beret</a><li title="Heavy on the Magick
+Gargoyle 1986"><a href="../qaop.html#!heavymagick">Heavy on the Magick</a><li title="Jack the Nipper
+Gremlin 1986"><a href="../qaop.html#!jacknipper">Jack the Nipper</a><li title="Knight Tyme
+David Jones / Mastertronic 1986"><a href="../qaop.html#!knighttyme">Knight Tyme</a><li title="Leader Board
+Canvas / US Gold 1986"><a href="../qaop.html#!leaderboard">Leader Board</a><li title="Light Force
+FTL 1986"><a href="../qaop.html#!lightforce">Light Force</a><li title="Movie
+Duško Dimitrijević / Imagine 1986"><a href="../qaop.html#!movie">Movie</a><li title="Ping Pong
+Bernie Duggs / Imagine 1986"><a href="../qaop.html#!pingpong">Ping Pong</a><li title="Pippo
+Mastertronic 1986"><a href="../qaop.html#!pippo">Pippo</a><li title="Quazatron
+Steve Turner / Hewson 1986"><a href="../qaop.html#!quazatron">Quazatron</a><li title="Rebelstar
+Julian Gollop / Firebird 1986"><a href="../qaop.html#!rebelstar">Rebelstar</a><li title="Sir Fred
+Made in Spain 1986"><a href="../qaop.html#!sirfred">Sir Fred</a><li title="Starglider
+Realtime Games / Rainbird 1986"><a href="../qaop.html#!starglider">Starglider</a><li title="Sweevo’s World
+Gargoyle 1986"><a href="../qaop.html#!sweevosworld">Sweevo’s World</a><li title="Tantalus
+Paul Hargreaves / Quicksilva 1986"><a href="../qaop.html#!tantalus">Tantalus</a><li title="Terra Cresta
+Jonathan Smith / Imagine 1986"><a href="../qaop.html#!terracresta">Terra Cresta</a><li title="Thanatos
+Durell 1986"><a href="../qaop.html#!thanatos">Thanatos</a><li title="Three Weeks in Paradise
+Mikro-Gen 1986"><a href="../qaop.html#!paradise">Three Weeks in Paradise</a><li title="The Trap Door
+Don Priestley / Piranha 1986"><a href="../qaop.html#!trapdoor">The Trap Door</a><li title="TT Racer
+Rod Swift / Digital Integration 1986"><a href="../qaop.html#!ttracer">TT Racer</a><li title="Turbo Esprit
+Mike Richardson / Durell 1986"><a href="../qaop.html#!esprit">Turbo Esprit</a><li title="Uridium
+Dominic Robinson / Hewson 1986"><a href="../qaop.html#!uridium">Uridium</a><li title="Who Dares Wins II
+Steve Evans / Alligata 1986"><a href="../qaop.html#!whodares2">Who Dares Wins II</a><li title="Winter Games
+Sentient Software / US Gold 1986"><a href="../qaop.html#!wintergames">Winter Games</a><li title="Xeno
+Binary Design / A’n’F Software 1986"><a href="../qaop.html#!xeno">Xeno</a></ul></section><section id=1987><h2><a href="games#1987" tabindex=-1>1987</a></h2><ul><li title="Academy
+Pete Cooke / CRL Group 1987"><a href="../qaop.html#!tauceti2">Academy</a><li title="Amaurote
+Binary Design / Mastertronic 1987"><a href="../qaop.html#!amaurote">Amaurote</a><li title="Arkanoid
+Imagine 1987"><a href="../qaop.html#!arkanoid">Arkanoid</a><li title="Auf Wiedersehen Monty
+Gremlin 1987"><a href="../qaop.html#!montymole4">Auf Wiedersehen Monty</a><li title="Ball Breaker
+The Zen Room / CRL Group 1987"><a href="../qaop.html#!ballbreaker">Ball Breaker</a><li title="Batty
+Mark Crane / Hit-Pak 1987"><a href="../qaop.html#!batty">Batty</a><li title="Bubble Bobble
+Software Creations / Firebird 1987"><a href="../qaop.html#!bubblebobble">Bubble Bobble</a><li title="Chronos
+Mastertronic 1987"><a href="../qaop.html#!chronos">Chronos</a><li title="Dark Sceptre
+Maelstrom / Firebird 1987"><a href="../qaop.html#!darksceptre">Dark Sceptre</a><li title="Deflektor
+Costa Panayi / Gremlin 1987"><a href="../qaop.html#!deflektor">Deflektor</a><li title="Driller
+Major Developments / Incentive 1987"><a href="../qaop.html#!driller">Driller</a><li title="Elevator Action
+Binary Design / Quicksilva 1987"><a href="../qaop.html#!elevatoraction">Elevator Action</a><li title="Exolon
+Raffaele Cecco / Hewson 1987"><a href="../qaop.html#!exolon">Exolon</a><li title="Flying Shark
+Graftgold / Firebird 1987"><a href="../qaop.html#!flyingshark">Flying Shark</a><li title="Gunrunner
+Cybadyne / Hewson 1987"><a href="../qaop.html#!gunrunner">Gunrunner</a><li title="Head over Heels
+Ocean 1987"><a href="../qaop.html#!headoverheels">Head over Heels</a><li title="Hydrofool
+FTL 1987"><a href="../qaop.html#!hydrofool">Hydrofool</a><li title="Impossaball
+John M. Phillips / Hewson 1987"><a href="../qaop.html#!impossaball">Impossaball</a><li title="International Karate+
+Dan Michek / System 3 1987"><a href="../qaop.html#!ikplus">International Karate+</a><li title="Into the Eagle’s Nest
+Pandora 1987"><a href="../qaop.html#!eaglesnest">Into the Eagle’s Nest</a><li title="Jack the Nipper II
+Greg Holmes / Gremlin 1987"><a href="../qaop.html#!jacknipper2">Jack the Nipper II</a><li title="Kinetik
+Firebird 1987"><a href="../qaop.html#!kinetik">Kinetik</a><li title="Krakout
+Gremlin 1987"><a href="../qaop.html#!krakout">Krakout</a><li title="Match Day II
+Ocean 1987"><a href="../qaop.html#!matchday2">Match Day II</a><li title="Mercenary
+Paul Woakes / Novagen 1987"><a href="../qaop.html#!mercenary">Mercenary</a><li title="Micronaut One
+Pete Cooke / Nexus 1987"><a href="../qaop.html#!micronaut1">Micronaut One</a><li title="Motos
+Binary Design / Mastertronic 1987"><a href="../qaop.html#!motos">Motos</a><li title="Nebulus
+John M. Phillips / Hewson 1987"><a href="../qaop.html#!nebulus">Nebulus</a><li title="Nether Earth
+Argus Press 1987"><a href="../qaop.html#!netherearth">Nether Earth</a><li title="Rana Rama
+Graftgold / Hewson 1987"><a href="../qaop.html#!ranarama">Rana Rama</a><li title="Renegade
+Imagine 1987"><a href="../qaop.html#!renegade">Renegade</a><li title="Rescue
+Icon Design / Mastertronic 1987"><a href="../qaop.html#!rescue">Rescue</a><li title="Saboteur 2
+Clive Townsend / Durell 1987"><a href="../qaop.html#!saboteur2">Saboteur 2</a><li title="Sceptre of Bagdad
+Atlantis 1987"><a href="../qaop.html#!bagdad">Sceptre of Bagdad</a><li title="The Sentinel
+Software Creations / Firebird 1987"><a href="../qaop.html#!sentinel">The Sentinel</a><li title="Short Circuit
+Ocean 1987"><a href="../qaop.html#!shortcircuit">Short Circuit</a><li title="Silent Service
+Sid Meier / MicroProse 1987"><a href="../qaop.html#!silentservice">Silent Service</a><li title="Stormbringer
+David Jones / Mastertronic 1987"><a href="../qaop.html#!stormbringer">Stormbringer</a><li title="Through the Trap Door
+Don Priestley / Piranha 1987"><a href="../qaop.html#!trapdoor2">Through the Trap Door</a><li title="Vulcan
+Robert T. Smith / CCS 1987"><a href="../qaop.html#!vulcan">Vulcan</a><li title="Wizball
+Ocean 1987"><a href="../qaop.html#!wizball">Wizball</a><li title="Xecutor
+Cybadyne / ACE 1987"><a href="../qaop.html#!xecutor">Xecutor</a><li title="Zynaps
+Dominic Robinson / Hewson 1987"><a href="../qaop.html#!zynaps">Zynaps</a></ul></section><section id=1988><h2><a href="games#1988" tabindex=-1>1988</a></h2><ul><li title="La Abadía del Crimen
+Opera 1988" lang=es><a href="../qaop.html#!abadia">La Abadía del Crimen</a><li title="Action Force II
+Gang of Five / Virgin Games 1988"><a href="../qaop.html#!actionforce2">Action Force II</a><li title="Arkanoid – Revenge of Doh
+Imagine 1988"><a href="../qaop.html#!arkanoid2">Arkanoid – Revenge of Doh</a><li title="ATF
+Digital Integration 1988"><a href="../qaop.html#!atf">ATF</a><li title="Ballbreaker 2
+The Zen Room / CRL Group 1988"><a href="../qaop.html#!ballbreaker2">Ballbreaker 2</a><li title="Cybernoid
+Raffaele Cecco / Hewson 1988"><a href="../qaop.html#!cybernoid">Cybernoid</a><li title="Cybernoid II
+Hewson 1988"><a href="../qaop.html#!cybernoid2">Cybernoid II</a><li title="Dan Dare II
+Gang of Five / Virgin Games 1988"><a href="../qaop.html#!dandare2">Dan Dare II</a><li title="Earthlight
+Nexus / Firebird 1988"><a href="../qaop.html#!earthlight">Earthlight</a><li title="Fox Fights Back
+Denton Designs / Image Works 1988"><a href="../qaop.html#!foxx">Fox Fights Back</a><li title="Ikari Warriors
+David Shea / Elite 1988"><a href="../qaop.html#!ikari">Ikari Warriors</a><li title="Impact
+Steven Tucker / Audiogenic 1988"><a href="../qaop.html#!impact">Impact</a><li title="Inside Outing
+Michael St Aubyn / The Edge 1988"><a href="../qaop.html#!insideouting">Inside Outing</a><li title="Intensity
+Graftgold / Firebird 1988"><a href="../qaop.html#!intensity">Intensity</a><li title="Mad Mix Game
+Topo Soft 1988"><a href="../qaop.html#!madmix">Mad Mix Game</a><li title="Marauder
+Arcanum / Hewson 1988"><a href="../qaop.html#!marauder">Marauder</a><li title="Operation Wolf
+Ocean 1988"><a href="../qaop.html#!operationwolf">Operation Wolf</a><li title="Pac-Mania
+Krisalis / Grandslam 1988"><a href="../qaop.html#!pacmania">Pac-Mania</a><li title="Rebelstar II
+Target Games / Silverbird 1988"><a href="../qaop.html#!rebelstar2">Rebelstar II</a><li title="Rex
+The Light / Martech 1988"><a href="../qaop.html#!rex">Rex</a><li title="Soldier of Fortune
+Graftgold / Firebird 1988"><a href="../qaop.html#!soldierfortune">Soldier of Fortune</a><li title="WEC Le Mans
+Sentient Software / Imagine 1988"><a href="../qaop.html#!lemans">WEC Le Mans</a><li title="Where Time Stood Still
+Denton Designs / Ocean 1988"><a href="../qaop.html#!timestood">Where Time Stood Still</a><li title="Xenon
+Icon Design / Melbourne House 1988"><a href="../qaop.html#!xenon">Xenon</a></ul></section><section id=1989><h2><a href="games#1989" tabindex=-1>1989</a></h2><ul><li title="Canyon Warrior
+Front Room / Mastertronic 1989"><a href="../qaop.html#!canyonwarrior">Canyon Warrior</a><li title="Carrier Command
+Realtime Games / Rainbird 1989"><a href="../qaop.html#!carriercommand">Carrier Command</a><li title="Chase H.Q.
+Ocean 1989"><a href="../qaop.html#!chasehq">Chase H.Q.</a><li title="Gregory Loses His Clock
+Don Priestley / Mastertronic 1989"><a href="../qaop.html#!gregory">Gregory Loses His Clock</a><li title="H.A.T.E.
+Vortex / Gremlin 1989"><a href="../qaop.html#!hate">H.A.T.E.</a><li title="Licence to Kill
+Domark 1989"><a href="../qaop.html#!licencetokill">Licence to Kill</a><li title="Rick Dangerous
+Core Design / Firebird 1989"><a href="../qaop.html#!rickdangerous">Rick Dangerous</a><li title="Stormlord
+Raffaele Cecco / Hewson 1989"><a href="../qaop.html#!stormlord">Stormlord</a><li title="Striker
+Cult Games 1989"><a href="../qaop.html#!striker">Striker</a><li title="Stunt Car Racer
+Pete Cooke / Micro Style 1989"><a href="../qaop.html#!stuntcar">Stunt Car Racer</a><li title="Zybex
+Zeppelin 1989"><a href="../qaop.html#!zybex">Zybex</a></ul></section><section id=199x><h2><a href="games#199x" tabindex=-1>199x</a></h2><ul><li title="Boovie 2
+E.S.A. Productions 1999" lang=cs><a href="../qaop.html#!boovie2">Boovie 2</a><li title="Dan Dare III
+Probe / Virgin Games 1990"><a href="../qaop.html#!dandare3">Dan Dare III</a><li title="Extreme
+Digital Integration 1991"><a href="../qaop.html#!extreme">Extreme</a><li title="Hero Quest
+Games Workshop / Gremlin 1991"><a href="../qaop.html#!heroquest">Hero Quest</a><li title="Komando 2
+Ultrasoft 1992" lang=sk><a href="../qaop.html#!komando2">Komando 2</a><li title="The Light Corridor
+New Frontier / Infogrames 1991"><a href="../qaop.html#!lightcorridor">The Light Corridor</a><li title="Midnight Resistance
+Special FX / Ocean 1990"><a href="../qaop.html#!resistance">Midnight Resistance</a><li title="Quadrax
+Ultrasoft 1994"><a href="../qaop.html#!quadrax">Quadrax</a><li title="Rainbow Islands
+Graftgold / Ocean 1990"><a href="../qaop.html#!rainbowislands">Rainbow Islands</a><li title="Rod-Land
+Twilight / Storm 1991"><a href="../qaop.html#!rodland">Rod-Land</a><li title="Stack Up
+David Sanders / Zeppelin 1991"><a href="../qaop.html#!stackup">Stack Up</a><li title="Switchblade
+Gremlin 1991"><a href="../qaop.html#!switchblade">Switchblade</a><li title="Triblox
+Mike Dowman 1993"><a href="../qaop.html#!triblox">Triblox</a></ul></section><section id=200x><h2><a href="games#200x" tabindex=-1>200x</a></h2><ul><li title="Albatrossity
+Jonathan Cauldwell 2008"><a href="../qaop.html#!albatrossity">Albatrossity</a><li title="Dominetris
+Bob Smith / Cronosoft 2005"><a href="../qaop.html#!dominetris">Dominetris</a><li title="Egghead 4
+Jonathan Cauldwell 2006"><a href="../qaop.html#!egghead4">Egghead 4</a><li title="Egghead 5
+Jonathan Cauldwell 2009"><a href="../qaop.html#!egghead5">Egghead 5</a><li title="Egghead in Space
+Jonathan Cauldwell 2003"><a href="../qaop.html#!egghead3">Egghead in Space</a><li title="Hexagonal Filler
+Alone Coder 2004"><a href="../qaop.html#!hexfiller">Hexagonal Filler</a><li title="Sgt. Helmet Zero
+Mojon Twins 2009"><a href="../qaop.html#!helmetzero">Sgt. Helmet Zero</a><li title="W*H*B
+Bob Smith 2009"><a href="../qaop.html#!whb">W*H*B</a></ul></section><section id=201x><h2><a href="games#201x" tabindex=-1>201x</a></h2><ul><li title="Alter Ego
+RetroSouls 2011"><a href="../qaop.html#!alterego">Alter Ego</a><li title="Buzzsaw+
+Jason Railton 2011"><a href="../qaop.html#!buzzsaw">Buzzsaw+</a><li title="Genesis
+RetroWorks 2010"><a href="../qaop.html#!genesis">Genesis</a><li title="Gravibots
+RetroSouls 2014"><a href="../qaop.html#!gravibots">Gravibots</a><li title="Horace in the Mystic Woods
+Bob Smith 2010"><a href="../qaop.html#!horacewoods">Horace in the Mystic Woods</a><li title="Invasion of the Zombie Monsters
+Relevo Videogames 2010" style=word-spacing:-1pt;transform:scaleX(.95);transform-origin:left><a href="../qaop.html#!iotzm">Invasion of the Zombie Monsters</a><li title="Karlos
+Perspective Group 2010"><a href="../qaop.html#!karlos">Karlos</a><li title="S.I.P
+RetroSouls 2014"><a href="../qaop.html#!sip">S.I.P</a><li title="Speccies
+Tardis 2013"><a href="../qaop.html#!speccies">Speccies</a><li title="Stormfinch
+Dave Hughes / Stonechat 2015"><a href="../qaop.html#!stormfinch">Stormfinch</a><li title="Willy The Wasp 2
+Death Squad 2014"><a href="../qaop.html#!willywasp2">Willy The Wasp 2</a><li title="Zombie Calavera Prologue
+Mojon Twins 2010"><a href="../qaop.html#!calavera">Zombie Calavera Prologue</a></ul></section></div><time style=float:right;font-size:10px;color:var(--gr);margin-right:1ex title=2020-03-22>mmxx ııı xxıı</time></main>
+<script>!function(t){var i,u,r="";function e(){var i,u=5,e=tts.value.replace(/^ +| +$| +(?= )/g,"").toUpperCase(),n=e.match(/(.+)([2-5])$/);return n&&(e=n[1],n=n[2]),e&&g.forEach(function(s){function t(t,n){var o=(t=t.toUpperCase()).indexOf(e);0<o&&(o=1+/[a-z0-9]/.test(t[o-1])),~o&&(o+=2*(!n||t[t.length-1]!=n&&(1<n||/[2-9]$/.test(t))))<u&&(i=s,u=o)}t(s.textContent.replace(/^The /,"")),t(s.hash.substr(2),n)}),i?(i.focus(),r=e,i):void 0}g=[].slice.call(t.querySelectorAll("#g li>a:first-child")),tts=t.getElementById("tts"),tts.parentNode.onsubmit=function(){var t;return e()||(t=tts.placeholder,tts.placeholder="Not found!",setTimeout(function(){tts.placeholder=t},1e3)),tts.value="",!1},onkeypress=function(t){var n,o,s;t.target==tts||t.altKey||t.ctrlKey||(n=String.fromCharCode(t.which).toUpperCase(),s="",/[A-Z0-9 '\b]/.test(n)&&(o=tts.value,/[1-5]/.test(n)?(o||(o=r,s=n),o=o.replace(/[1-9]?$/,"1"<n?n:"")):"\b"!=n&&(i&&u&&(o=u),o+=n),u=s,tts.value=o,clearTimeout(i),i=setTimeout(function(){i=0,tts.value=""},1e3),e(),t.preventDefault()))},onkeydown=function(t){t.target!=tts&&i&&8==t.which&&t.preventDefault()}}(document);
+</script><nav id=l>
+<a href="../qaop.html" id=emu accesskey=q>
+<svg width=72 height=88><title>run QAOP</title>
+<path transform=scale(5)
+d='m2 0h2v2h1v1h2v-1h1v-2h2v2h-2v2h1v1h1v1h1v1h1v2h-1v-2h-1v1h-1v1h-1v1h1v1h-1v1h-1v-1h1v-1h-1v-1h-2v1h-1v1h1v1h-1v-1h-1v-1h1v-1h-1v-1h-1v-1h-1v2h-1v-2h1v-1h1v-1h1v-1h1v-2h-2zm2 7v1h4v-1z'/>
+<path transform=scale(2)
+d='m13 37h-4v2h4zm16 0h-4v2h4zm-24 0h-4v4h2v-1h-1v-1h1v1h1v1h1zm16 0h-4v4h4zm-20 5v-1h-1v-4h1v-1h4v1h1v4h-1v1zm12 0v-2h-4v2h-1v-5h1v-1h4v1h1v5zm4 0v-1h-1v-4h1v-1h4v1h1v4h-1v1zm7 0v-6h5v1h1v2h-1v1h-4v2z'/>
+</svg></a>
+<ul><li><a href="info.html" accesskey=i>info</a><li><b style='padding-right:2px;cursor:default'>games ‣</b><li><a href="links.html" accesskey=l>links</a></ul>
+<a id=d tabindex=0 style=visibility:hidden;letter-spacing:-1px;color:#B01></a>
+<a id=jb href="../~jb" target=_top rel=author>~jb</a>
+</nav>
+<script>
+//if(localStorage['qaop-state'])setTimeout(function(){var e=document.getElementById('d');e.innerHTML='<i><b>Pay</b>Pal</i>donate<form action=https://www.paypal.com/cgi-bin/webscr method=post hidden%cmd value=_donations%business value=jb&#64;torinak.com%item_name value=Qaop/JS%lc value=US>'.replace(/%/g,'><input type=hidden name=');e.onclick=function(){e.lastChild.submit()};e.setAttribute('style','')},9)
+</script>

@@ -1,0 +1,76 @@
+<!doctype html><html manifest=qaop/manifest><meta charset=utf-8>
+<title>Qaop – ZX Spectrum emulator</title>
+<meta name=description content="Online ZX Spectrum emulator in Javascript | F9 – menu | F11 – full screen | Ins – games">
+<meta name=author content='Jan Bobrowski'>
+<!--[if lt IE 11]><script>location.replace('qaop/unsupported')</script><![endif]-->
+<link rel=icon href=qaop/icon.png><link rel=mask-icon href=qaop/mask.svg color=#c01><link rel=image_src href=qaop/qaop.png>
+<link rel=canonical href=qaop>
+<link rel=manifest href=qaop/manifest.wam><meta name=viewport content="width=768,user-scalable=no"><meta name=theme-color content=#000>
+<style>
+html{height:100%;overflow:hidden}body{min-height:100%;margin:0;background:#000;color:#fff;font:13px sans-serif}body.full:not(.move):not(.pause){cursor:none}#c,#k,#l,#m,#p,#pb,#r{position:fixed}*{outline:0}#s{width:100%;height:100%}#m,#pb{visibility:hidden}#m.v,#pb.v{visibility:visible}.anim #c,.anim #l,.anim #r{transition:width .2s,height .2s,top .2s,left .2s,right .2s,bottom .2s}#k>div,#l>div,#rtabs,#rtabs>*,#snaps,#splash,.bbutt{position:absolute}#l,#r{top:0;bottom:0;width:0}#l{left:0;width:256px;background:#200;background:rgba(40,0,0,.9);color:#c44}#r{right:0;width:272px;background:#010;background:rgba(0,35,0,.9);color:#4b4}#l>div{top:0;left:0;right:0;bottom:20px;padding:16px 16px 16px 32px}#r>div{margin:12px 0 8px 16px}#l button{background:#c44}#r button{background:#4b4}#m,#splash,h1{text-align:center}#k{cursor:default;left:0;right:0;bottom:0;line-height:1.3;-webkit-user-select:none}#k>div{background:#246;border-radius:5%;text-indent:4px;font-size:3vw}h1{font:33px/1 sans-serif;margin:1em 0 0;letter-spacing:-2px;text-shadow:#000 0 1px 1px;cursor:default}.update h1{color:#fc0;text-shadow:0 0 9px #fc0}ul{padding:0;margin:0}a{color:inherit;text-decoration:inherit}button{display:inline-block;border:0;margin:4px 4px 4px 0;padding:1px 1em;border-radius:4px;color:#000;font:inherit;line-height:1.4em}button:active:not(:disabled){position:relative;top:1px}button:disabled{opacity:.6}button:focus{outline:0}#l button:focus{box-shadow:0 0 0 1px #000,0 0 4px 1px #c44}#r button:focus{box-shadow:0 0 0 1px #000,0 0 4px 1px #4b4}button.active::before{display:block;float:left;content:'\2022';width:1em;margin-left:-1em}button::-moz-focus-inner{border:0;padding:0;margin:0}#m{width:320px;top:0;left:50%;margin-left:-160px;font:17px calibri,sans-serif;padding:4px 1em;color:#ffc;background:rgba(147,121,0,.3);text-shadow:0 0 3px #000;border-radius:4px;transition:top .1s}#m.v{top:9px}#pb{top:0;left:0;right:0;height:2px;background-color:#222}#pb>*{width:0;height:2px;background:currentColor}#pb.a{animation:pb 2s linear infinite;background-size:32px 32px;background-image:linear-gradient(-45deg,currentColor 25%,#222 25%,#222 50%,currentColor 50%,currentColor 75%,#222 75%,#222)}@keyframes pb{from{background-position:32px 32px}to{background-position:0 0}}#p{display:none}.pause #p{display:block}#rtabs{top:48px;bottom:0;left:16px;right:0}#rtabs>*{top:0;left:0;right:0;bottom:0;visibility:hidden}body.noaudio .audio{display:none}#l #vol{background:0 0;width:133px;padding:.7em 5px;vertical-align:top}#vol:active{top:0}#vol *{border-radius:2px}#vol>*{margin:-2px 0;background:#622}#vol>*>*{height:4px;width:50%;background:#a33}#vol>*>*>*{height:16px;width:8px;margin:-6px -4px;float:right;background:#c44;box-shadow:#000 0 0 2px}#vol:disabled>*>*{visibility:hidden}.mute #vol>*>*{background:0 0}.info{font:italic 100% candara,sans-serif}dl{margin:9px 0}dt{height:0}dd{margin:0 0 0 4em}.keys dt{font:95% monospace}.tabv>.active{border-radius:4px 4px 0 0}.tabv>.active::before{content:none}.ls{list-style:none;margin:0;padding:1px 0 8px 0;overflow:hidden}.ls>*{padding:1px}.ls>*>a{padding:0 .5em;cursor:default}.ls:focus>.sel>a{outline:1px dotted}.ls>*>a:hover{background:rgba(0,0,0,.5)}.ls.sel>*>a{padding-left:1em}.ls.sel>.sel:before{display:block;position:relative;float:left;content:'\25AA';width:1em;text-align:center;margin-right:-1em}.ls input{color:inherit;border:1px solid;background:0 0;margin:-2px 0 -2px 1em;outline:0}.ls,.sc{overflow:auto;outline:0;scrollbar-color:currentColor transparent;scrollbar-width:thin;-webkit-overflow-scrolling:touch}::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:currentColor;opacity:.8;border-radius:6px}#snaps{top:0;left:0;right:0;bottom:42px}.bbutt{bottom:10px}#kh{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#000;text-align:center}#kh>*{max-width:100%;max-height:100%}.embed{background:0 0}.embed #l,.embed #r{display:none}@media print{#c{position:static;width:6.4in!important;height:4.96in!important}#k,#l,#p,#r{display:none}}[hidden]{display:none}
+</style>
+<body style=cursor:wait>
+<div id=splash style='top:45%;left:0;right:0;margin:-22px 0 0;font:35px/1.3 sans-serif;letter-spacing:-2px;opacity:.8'>
+<b style=color:#c00>Q</b><b style=color:#970>a</b><b style=color:#180>o</b><b style=color:#049>p</b><span style=color:#508;font-size:90%>/JS</span>
+<div style=color:#666;font-size:11px;letter-spacing:2px><a href=qaop.html>ZX Spectrum emulator</a></div>
+</div>
+<script>
+function $(n){return document.querySelector(n)}function $$(n){return[].slice.call(document.querySelectorAll(n))}function $e(n){return document.createElement(n)}function bytes(t){try{var e=new Uint8Array(t)}catch(n){for(e=new Array(t);0<t;)e[--t]=0}return e}ld=function(){var e,o,t=new Image;return t.onload=function(){var r=$e("canvas"),u=t.width,n=t.height,i=16384;r.width=u,r.height=n,(r=r.getContext("2d",{alpha:!1})).drawImage(t,0,0),e=[0,2*i,i].map(function(n){var t,e=r.getImageData(0,n/u,u,i/u).data,o=bytes(i);for(t=0;t<16384;t++)o[t]=e[4*t];return o}),o&&o()},t.src="qaop/rom.img",function(n,t){o=function(){$("body").style.cursor="",emu.init(e,n,t),ui.init(),ld.ready&&ld.ready(),ld=null},e&&o()}}(),function(){var o=[],u=[];ui={msg:function(n,t){var e;(e=n.stack)&&console.error(e),(e=n.message)&&(n=e),n+="",o.push([n,t||3e3+9*n.length])<2&&function n(){var t=o[0],e=$("#m");e.className="v";e.textContent=t[0];setTimeout(function(){e.className="",setTimeout(function(){o.shift(),o[0]&&n()},99)},t[1])}()},progress:function(n){var t,e=$("#pb"),o=0,r=0;"string"==typeof n?e.style.color=n:u.indexOf(n)<0&&u.push(n),u.forEach(function(n){t|=!n.e,o+=0|n.b,r+=0|n.t}),t=t?(e.firstChild.style.width=100*(r?o/r:0)+"%",o&&r?"v":"v a"):(u=[],""),e.className=t}},top!=self&&($("body").className="embed",ui.embed=!0)}()
+//setTimeout(function(){$("#l>*").innerHTML+="<form action=https://www.paypal.com/cgi-bin/webscr method=post style=display:inline-block>%cmd value=_donations>%business value=jb&#64;torinak.com>%item_name value=QAOP>%currency_code value=EUR>%lc value=GB><button type=upload title=donate style='background:none;border:0;padding:1px 6px;margin:0 1em 0 -4px;font:bold italic 17px/1.4 verdana,sans-serif;letter-spacing:-1px;color:#200;text-shadow:#C44 1px 0 0,#C44 -1px 0 0,#C44 0 1px 0,#C44 0 -1px 0;cursor:pointer'>PayPal\xa0</button></form>".replace(/%/g,"<input type=hidden name=")},3e3)
+</script>
+<div id=c tabindex=-1>
+<canvas id=s contextmenu=emenu><q>© 1982 Sinclair Research Ltd</q></canvas>
+<div id=k></div>
+<svg id=p viewBox=0,0,5,5 style=bottom:0;left:48%;width:4% onclick='ui.cmd("pause")'><path d='m1 1v3h1v-3m1 0v3h1v-3' fill=#fff></svg>
+</div>
+<div id=l><div class=sc>
+<h1><b>Qaop</b>/JS</h1>
+<a href=qaop.html style='display:block;margin:0 0 2em;text-align:center;font-size:85%'>HTML5 ZX Spectrum emulator</a>
+<button disabled class=c-pause accesskey=p>Pause</button>
+<button disabled class=c-open accesskey=o>Open</button>
+<button disabled class=c-save accesskey=o>Save</button>
+<button disabled class=c-reset>Reset</button>
+<button disabled class=c-128>128</button> <button disabled class=c-ay>AY</button>
+<div class=audio>
+<button disabled class=c-mute>Mute</button>
+<button disabled id=vol title=Volume><div><div><div></div></div></div></button>
+</div>
+<p style='margin:1em 0 2px'>Snapshot</p>
+<button disabled class=c-remember accesskey=s>Remember</button>
+<button disabled class=c-restore>Restore</button>
+<div class=info style=margin-top:1em>Keyboard:<dl class=keys>
+<dt>Shift<dd>Caps Shift<dt>Ctrl<dd>Symbol Shift<dt>Alt<dd>Symbol Shift<dt>Tab<dd>Extended Mode<dt>Home<dd>Edit<dt title='Ctrl-Del'>^Del<dd>reset<dt>F1<dd><a href=qaop/info.html target=_top>info...</a><dt>F2<dd>remember<dt>F3<dd>recall<dt>F8<dd>keyboard layout<dt>F9<dd>menu<dt>F11<dd>full screen<dt>Pause<dd>pause<dt>Insert<dd><a rel=search href=qaop/games.html target=_top>games...</a></dl></div>
+<p>Formats supported: TAP, Z80, SNA, ROM, SCR
+</div>
+<a style='display:block;position:absolute;bottom:4px;left:0;right:0;text-align:center;letter-spacing:4px;font-size:11px;opacity:.7'
+href=qaop.html>© Jan Bobrowski</a>
+</div>
+<div id=r><div>
+<span class=tabv>
+<button data-for=userg data-down=userg hidden>User</button>
+<button data-for=snapp data-down=snaps>Snaps</button>
+</span>
+<div id=rtabs>
+<ul id=userg class=ls tabindex=0></ul>
+<div id=snapp><ul id=snaps class='ls sel' tabindex=0></ul><div class=bbutt><button disabled class=c-svsna>Save to disk</button>
+<button disabled class=c-rmsna>Remove</button></div>
+</div>
+</div>
+</div></div>
+<div id=m></div>
+<div id=kh></div>
+<div id=pb><div></div></div>
+<div style=visibility:hidden><a rel=help href=qaop/info.html target=_top>help</a><a id=save></a><input id=open type=file accept='.tap,.z80,.sna,.scr,.rom'>
+<form id=submit hidden onsubmit='event.preventDefault();document.activeElement.onenter()'></form><input id=bb>
+<menu type=context id=emenu>
+<menuitem label=Pause type=checkbox class=c-pause accesskey=p></menuitem>
+<menuitem label=Reset class=c-reset accesskey=r></menuitem>
+<menuitem label=Open... class=c-open accesskey=o></menuitem>
+<menuitem label=Save... class=c-save accesskey=s></menuitem>
+<menuitem label=128 type=checkbox class=c-128></menuitem>
+<menuitem label=Mute type=checkbox class=c-mute></menu>
+</div>
+<![if gt IE 10]>
+<script src=qaop/gext.js></script>
+<script src=qaop/qaop.js></script>
+<![endif]>
